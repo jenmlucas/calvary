@@ -10,6 +10,8 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import SecondMenu from "@mui/material/Menu";
 import SecondMenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
+
 
 export default function Nav() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -32,12 +34,16 @@ export default function Nav() {
   return (
     <Box>
       <AppBar position="static">
-        <img src={hero} alt="hero" width="auto" />
         <Toolbar>
-          <Typography variant="h4" component="div" sx={{ flexGrow: 5 }}>
-            Calvary Chapel Saving Grace
+          <Typography variant="h2" component="div" sx={{ flexGrow: 5 }} textAlign="center">
+            Calvary Chapel Saving Grace <br></br> Mesa
           </Typography>
-          <Grid> 
+          <Grid textAlign={"center"}> 
+          <Link to="/home"  style={{ textDecoration: "none", color: "white" }}>
+          <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
+            Home
+          </Button>
+          </Link>
           <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
             Know Jesus
           </Button>
@@ -62,7 +68,9 @@ export default function Nav() {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>Our Beliefs</MenuItem>
+            <Link to="/beliefs" style={{ textDecoration: "none", color: "black"}}>
+            <MenuItem onClick={handleClose} >Our Beliefs</MenuItem>
+            </Link>
             <MenuItem onClick={handleClose}>What is Calvary Teaching</MenuItem>
             <MenuItem onClick={handleClose}>Calvary Chapel Doctrinal Statement</MenuItem>
           </Menu>
@@ -98,6 +106,7 @@ export default function Nav() {
           <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
             Service Times
           </Button>
+           <img src={hero} alt="hero" width="auto"/>
           </Grid>
         </Toolbar>
       </AppBar>
