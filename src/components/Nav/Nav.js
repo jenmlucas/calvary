@@ -36,8 +36,9 @@ export default function Nav() {
     <Box>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h2" component="div" sx={{ flexGrow: 5 }} textAlign="center">
-          <img src={calvary}height='60px'/> Calvary Chapel Saving Grace <br></br> Mesa
+        <img src={calvary}height='150px'/>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 5 }} textAlign="center">
+           Calvary Chapel Saving Grace <br></br> Mesa
           </Typography>
           <Grid textAlign={"center"}> 
           <Link to="/home"  style={{ textDecoration: "none", color: "white" }}>
