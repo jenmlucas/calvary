@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import SecondMenu from "@mui/material/Menu";
 import SecondMenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import calvary from "../../assets/images/calvary.png";
 
 
 export default function Nav() {
@@ -36,7 +37,7 @@ export default function Nav() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h2" component="div" sx={{ flexGrow: 5 }} textAlign="center">
-            Calvary Chapel Saving Grace <br></br> Mesa
+          <img src={calvary}height='60px'/> Calvary Chapel Saving Grace <br></br> Mesa
           </Typography>
           <Grid textAlign={"center"}> 
           <Link to="/home"  style={{ textDecoration: "none", color: "white" }}>
