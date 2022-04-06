@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
-import OurBeliefs from "./pages/OurBeliefs";
+import About from "./pages/About";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Nav></Nav>
       <Switch>
       <Route exact path="/home" component={Home} />
-      <Route exact path="/beliefs" component={OurBeliefs} />
+      <Route exact path="/about" component={About} />
       </Switch>
     </Router>
       <Footer></Footer>
