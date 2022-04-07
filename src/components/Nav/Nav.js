@@ -6,10 +6,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-// import SecondMenu from "@mui/material/Menu";
-// import SecondMenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import calvary from "../../assets/images/calvary.png";
 
@@ -22,15 +18,6 @@ export default function Nav() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  // const [anchorElSecond, setAnchorElSecond] = useState(null);
-  // const openSecond = Boolean(anchorElSecond);
-  // const handleClickSecond = (event) => {
-  //   setAnchorElSecond(event.currentTarget);
-  // };
-  // const handleCloseSecond = () => {
-  //   setAnchorElSecond(null);
-  // };
 
   return (
     <Box>
@@ -59,64 +46,11 @@ export default function Nav() {
                 About Us
               </Button>
             </Link>
-            {/* <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            > */}
-            {/* <Link
-                to="/beliefs"
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                <MenuItem onClick={handleClose}>Our Beliefs</MenuItem>
-              </Link> */}
-            {/* <MenuItem onClick={handleClose}>
-                What is Calvary Teaching
-              </MenuItem> */}
-            {/* <MenuItem onClick={handleClose}>
-                Calvary Chapel Doctrinal Statement
-              </MenuItem>
-            </Menu>
+            <Link to="/ministries" style={{ textDecoration: "none", color: "white" }}>
             <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
-              Know Jesus
-            </Button> */}
-            <Button
-              variant="h4"
-              component="div"
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-            >
               Ministries
             </Button>
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              <MenuItem onClick={handleClose}>
-                Men's Ministry
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                Women's Ministry
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                Transformed- Jr High/High School
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                Calvary Kidz
-              </MenuItem>
-            </Menu>
+            </Link>
             <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
               Support Us
             </Button>
@@ -128,7 +62,15 @@ export default function Nav() {
               style={{ textDecoration: "none", color: "white" }}
             >
             <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
-              Service Times
+              Contact
+            </Button>
+            </Link>
+            <Link
+              to="/"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+            <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
+              Pastors
             </Button>
             </Link>
             <img src={hero} alt="hero" width="auto" />
