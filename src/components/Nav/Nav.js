@@ -46,7 +46,7 @@ export default function Nav() {
             Calvary Chapel Saving Grace <br></br> Mesa
           </Typography>
           <Grid textAlign={"center"}>
-            <Link to="/home" style={{ textDecoration: "none", color: "white" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
               <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
                 Home
               </Button>
@@ -123,9 +123,14 @@ export default function Nav() {
             <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
               Sermons
             </Button>
+            <Link
+              to="/services"
+              style={{ textDecoration: "none", color: "white" }}
+            >
             <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>
               Service Times
             </Button>
+            </Link>
             <img src={hero} alt="hero" width="auto" />
           </Grid>
         </Toolbar>
