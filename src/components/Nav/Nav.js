@@ -66,7 +66,7 @@ export default function Nav() {
             </Button>
             </Link>
             <Link
-              to="/"
+              to=""
               style={{ textDecoration: "none", color: "white" }}
             >
             <Button variant="h4" component="div" sx={{ flexGrow: 5 }}>

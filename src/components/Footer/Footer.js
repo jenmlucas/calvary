@@ -2,6 +2,7 @@ import React from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
+import calvary from "../../assets/images/calvary.png";
 
 const useStyles = makeStyles({
     container: {
@@ -30,6 +31,7 @@ export default function Footer() {
         sx={{ width: "auto", height: "auto" }}
         className={classes.footer}
       >
+        <img src={calvary} height= "25px" />
     <Typography color="white">
         Calvary Chapel Saving Grace, All Rights Reserved. Copyright &copy; 2022-{year}
     </Typography>

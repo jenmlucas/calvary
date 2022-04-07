@@ -7,7 +7,7 @@ import { styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#A19472" : "#ffff",
+  backgroundColor: theme.palette.mode === "dark" ? "#A19472" : "#fffff2",
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
@@ -16,9 +16,31 @@ const Item = styled(Paper)(({ theme }) => ({
   boxShadow: "10px 10px 5px 12px lightblue",
   marginLeft: "20px",
   marginRight: "20px",
+  maxHeight: 450,
+  minHeight: 470,
+  borderRadius: "50px"
 }));
 
-const useStyles = makeStyles({});
+const useStyles = makeStyles({
+    buttons: {
+        marginTop: 180,
+    },
+    leftButton: {
+        marginRight: 250  
+    }, 
+    text: {
+        marginTop: 10
+    },
+    title: {
+        fontWeight: "bold",
+        marginTop: 10,
+        textDecoration: "underline"
+    },
+    subTitle: {
+        fontWeight: "bold",
+        marginTop: 10,
+    }
+});
 
 export default function Ministries() {
   const classes = useStyles();
@@ -28,7 +50,7 @@ export default function Ministries() {
         <Grid item xs={4}>
           <Item>
             <Typography>
-              <h1> Mens Study</h1>
+              <h1> Mens Ministry</h1>
             </Typography>
             <Typography>
               Like a wheel, God has chosen and placed men to be the hub, the
@@ -44,12 +66,12 @@ export default function Ministries() {
               brave, be strong. Let all that you do be done with love. 1st
               Corinthians 16:13
             </Typography>
-            <Typography>Monday Nights</Typography>
-            <Typography>
+            <Typography className={classes.title}>Monday Nights</Typography>
+            <Typography className={classes.text}>
               Dinner- 5:30 PM <br></br>
               Study- 6:30 PM
             </Typography>
-            <Typography>Contact Info</Typography>
+            <Typography className={classes.text}>Contact Info</Typography>
           </Item>
         </Grid>
 
@@ -58,14 +80,14 @@ export default function Ministries() {
             <Typography>
               <h1> Women's Ministry</h1>
             </Typography>
-            <Typography>Some Verse will go here</Typography>
-            <Typography>Studies</Typography>
-            <Typography>Grazing in the Word</Typography>
-            <Typography>1st and 3rd Saturdays </Typography>
-            <Typography>9 AM</Typography>
-            <Typography>Tuesday Nights</Typography>
-            <Typography>7 PM </Typography>
-            <Typography>Contact Info</Typography>
+            <Typography>Some Verse should go here</Typography>
+            <Typography className={classes.title}>Studies</Typography>
+            <Typography className={classes.subTitle}>Grazing in the Word</Typography>
+            <Typography className={classes.text}>1st and 3rd Saturdays </Typography>
+            <Typography className={classes.text}>9 AM</Typography>
+            <Typography className={classes.subTitle}>Tuesday Nights</Typography>
+            <Typography className={classes.text}>7 PM </Typography>
+            <Typography className={classes.text}>Contact Info</Typography>
           </Item>
         </Grid>
 
@@ -73,8 +95,8 @@ export default function Ministries() {
           <Item>
             <Typography>
               <h1> Transformed</h1>
+              <h2>Jr High and High School</h2>
             </Typography>
-            <Typography>Jr High and High School</Typography>
             <Typography>
               12 I beseech you therefore, brethren, by the mercies of God, that
               you present your bodies a living sacrifice, holy, acceptable to
@@ -83,24 +105,27 @@ export default function Ministries() {
               that you may prove what is that good and acceptable and perfect
               will of God.- Romans 12:1-2
             </Typography>
-            <Typography>Sundays- 10 AM</Typography>
-            <Typography>Contact Info</Typography>
+            <Typography className={classes.title}>Sundays</Typography>
+            <Typography className={classes.text}> 10 AM</Typography>
+            <Typography className={classes.text}>Contact Info</Typography>
           </Item>
         </Grid>
 
         <Grid item xs={4}>
           <Item>
             <Typography>
-              <h1> Kids Ministry </h1>
+              <h1> Kids </h1>
             </Typography>
-            <Typography>Some Verse</Typography>
-            <Typography>Sundays</Typography>
-            <Typography>10 AM</Typography>
-            <Typography>Wednesdays</Typography>
-            <Typography>7 PM</Typography>
-            <Button>Child Sign Up</Button>
-            <Button>Volunteer</Button>
-            <Typography>Contact Info</Typography>
+            <Typography>Some Verse should go here</Typography>
+            <Typography  className={classes.title}>Sundays</Typography>
+            <Typography className={classes.text} >10 AM</Typography>
+            <Typography  className={classes.title}>Wednesdays</Typography>
+            <Typography className={classes.text}>7 PM</Typography>
+            <Typography className={classes.text}>Please Find Linda or Debbie with questions</Typography>
+            <div className={classes.buttons}>
+            <Button className={classes.leftButton}>Child Sign Up</Button>
+            <Button>Volunteers</Button>
+            </div>
           </Item>
         </Grid>
 
@@ -109,14 +134,10 @@ export default function Ministries() {
             <Typography>
               <h1> Church Clean Up </h1>
             </Typography>
-            <Typography>Some Verse</Typography>
-            <Typography>Sundays</Typography>
-            <Typography>10 AM</Typography>
-            <Typography>Wednesdays</Typography>
-            <Typography>7 PM</Typography>
-            <Button>Child Sign Up</Button>
-            <Button>Volunteer</Button>
-            <Typography>Contact Info</Typography>
+            <Typography>Some Verse should go here</Typography>
+            <Typography>Saturdays</Typography>
+            <Typography>9 AM</Typography>
+            <Typography>contact</Typography>
           </Item>
         </Grid>
       </Grid>
